@@ -17,6 +17,7 @@ public:
 
 	void Menu()
 	{
+		game->Reset();
 		while (true)
 		{
 			// Main Menu
@@ -90,7 +91,7 @@ public:
 			std::cout << "---------------------------------------------------------------------" << std::endl;
 			std::cout << "|------<<GUIDE>>----------------------------------------------------|" << std::endl;
 			std::cout << "|-#->Is-a-Wall-(You-cant-walk-here)---------------------------------|" << std::endl;
-			std::cout << "|-@->Is-a-Player-(Press-|Up-Down-Left-Right|-Arrow-Keys-To-Walk-----|" << std::endl;
+			std::cout << "|-@->Is-a-Player-(Press-|Up-Down-Left-Right|-Arrow-Keys-To-Walk)----|" << std::endl;
 			std::cout << "|-%->Is-a-Fruit-(Walk-into-to-grab-it[+1])--------------------------|" << std::endl;
 			std::cout << "|-*->Is-a-Smart-Wall-(You-can-deactivate-by-walking-into-button)----|" << std::endl;
 			std::cout << "|-$->Is-a-Button-You-can-walk-into-it-to-deactivate-Smart-Wall------|" << std::endl;
