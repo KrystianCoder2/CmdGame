@@ -2,6 +2,7 @@
 
 #include "MainGame.h"
 
+// Pointer of MainGame class
 MainGame* game = new MainGame();
 
 class MainMenu
@@ -56,7 +57,7 @@ public:
 		{
 			system("cls");
 
-			// Get fruitsCollected int and print it to the top of the screen!
+			// Get fruitsCollected int and print it to the top of the screen
 			std::cout << "Fruits: " << game->fruitCollected << std::endl;
 			std::cout << "<<You can press Escape to go back to menu [(Progress will not be saved)]>>" << std::endl;
 
@@ -101,7 +102,7 @@ public:
 			std::cout << "|-------------------------------------------------------------------|" << std::endl;
 			std::cout << "---------------------------------------------------------------------" << std::endl;
 
-			// If Escape is clicked than we exit to main menu
+			// If Escape is clicked then we exit to main menu
 			if (GetAsyncKeyState(VK_ESCAPE))
 				Menu();
 

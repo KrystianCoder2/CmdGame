@@ -1,6 +1,7 @@
 #include <iostream>
 #include <Windows.h>
 
+// Map
 const char pMap[21][99] = {
 	"##################################################################################################",
 	"#@                                                                                               #",
@@ -65,12 +66,14 @@ public:
 
 	void Reset()
 	{
+		// Reset everything
 		fruitCollected = 0;
 		x = 1;
 		y = 1;
 		fruitCount = 0;
 		xFruit = 0;
 		yFruit = 0;
+		// Swap map ( The one player moves on ) with pMap ( Original map that is const ( It's value can't be changed ) )
 		for (int i = 0; i < 21; i++)
 			for (int j = 0; j < 99; j++)
 				map[i][j] = pMap[i][j];

@@ -17,6 +17,13 @@ int main()
 	//	}
 	//}
 
+	/*
+	Smart pointers are like normal pointers
+	but smart pointers get deleted when program exits
+	( So we dont need to worry about memory leaks ) 
+	*/
+
+	// Creates smart pointer of MainMenu class, and calls Menu()
 	unique_ptr<MainMenu> mainMenu = make_unique<MainMenu>();
 	mainMenu->Menu();
 }
