@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+	/* For debug only! */
 	//for (int j = 0; j < 99; j++)
 	//{
 	//	for (int i = 0; i < 21; i++)

@@ -9,10 +9,17 @@ class MainMenu
 private:
 	bool gamerunning;
 public:
+	~MainMenu()
+	{
+		// Deletes the pointer of MainGame when this class is destroyed
+		delete game;
+	}
+
 	void Menu()
 	{
 		while (true)
 		{
+			// Main Menu
 			system("cls");
 			std::cout << "------------------------------------------" << std::endl;
 			std::cout << "|----------------------------------------|" << std::endl;
@@ -48,6 +55,7 @@ public:
 		{
 			system("cls");
 
+			// Get fruitsCollected int and print it to the top of the screen!
 			std::cout << "Fruits: " << game->fruitCollected << std::endl;
 			std::cout << "<<You can press Escape to go back to menu [(Progress will not be saved)]>>" << std::endl;
 
@@ -60,6 +68,7 @@ public:
 
 			game->SpawnFruit();
 
+			// Checks for input
 			if (GetAsyncKeyState(VK_UP))
 				game->Move(0, -1);
 			if (GetAsyncKeyState(VK_DOWN))
@@ -91,6 +100,7 @@ public:
 			std::cout << "|-------------------------------------------------------------------|" << std::endl;
 			std::cout << "---------------------------------------------------------------------" << std::endl;
 
+			// If Escape is clicked than we exit to main menu
 			if (GetAsyncKeyState(VK_ESCAPE))
 				Menu();
 
