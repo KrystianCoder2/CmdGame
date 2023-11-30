@@ -105,8 +105,6 @@ public:
 			// If Escape is clicked then we exit to main menu
 			if (GetAsyncKeyState(VK_ESCAPE))
 				Menu();
-
-			system("pause>nul");
 		}
 	}
 };
