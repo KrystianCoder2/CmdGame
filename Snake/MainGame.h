@@ -166,4 +166,14 @@ public:
 			map[yFruit][xFruit] = '%';
 		}
 	}
+
+	int GetX()
+	{
+		return x;
+	}
+
+	int GetY()
+	{
+		return y;
+	}
 };
